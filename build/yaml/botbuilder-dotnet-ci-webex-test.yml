@@ -5,8 +5,10 @@
 # "name" here defines the build number format. Build number is accessed via $(Build.BuildNumber)
 name: $(Build.BuildId)
 
-pool:
-  vmImage: $[ coalesce( variables['VMImage'], 'windows-2019' ) ] # or 'windows-latest' or 'vs2017-win2016'
+pool: 
+  name: 'cscr-win19'
+  demands:
+  - Agent.Name -equals BOI-BMV19ADO-01
 
 trigger: # ci trigger
   batch: true
