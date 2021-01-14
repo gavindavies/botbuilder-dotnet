@@ -8,7 +8,7 @@ name: $(Build.BuildId)
 pool: 
   name: 'Azure Pipelines'
   demands:
-  - Agent.Name -equals fv-az248-832
+  - Agent.Name -Azure Pipelines 13
 
 trigger: # ci trigger
   batch: true
