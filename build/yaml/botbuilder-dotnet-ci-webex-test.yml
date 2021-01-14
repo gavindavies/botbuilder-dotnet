@@ -6,9 +6,9 @@
 name: $(Build.BuildId)
 
 pool: 
-  name: 'cscr-win19'
+  name: 'Azure Pipelines'
   demands:
-  - Agent.Name -equals BOI-BMV19ADO-01
+  - Agent.Name -equals fv-az248-832
 
 trigger: # ci trigger
   batch: true
