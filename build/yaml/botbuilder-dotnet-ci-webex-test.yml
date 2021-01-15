@@ -6,7 +6,7 @@
 name: $(Build.BuildId)
 
 pool:
-  vmImage: $[ coalesce( variables['VMImage'], 'windows-2019' ) ] # or 'windows-latest' or 'vs2017-win2016'
+  vmImage: $[ coalesce( variables['fv-az109-429'], 'windows-2019' ) ] # or 'windows-latest' or 'vs2017-win2016'
 
 trigger: # ci trigger
   batch: true
