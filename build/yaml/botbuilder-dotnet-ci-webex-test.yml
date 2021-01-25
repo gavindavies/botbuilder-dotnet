@@ -85,14 +85,10 @@ steps:
       Write-Host "##vso[task.complete result=Failed;]DONE"
     }
   displayName: Validate variables
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '3.x'
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
   inputs:
     command: 'restore'
-    projects: '**/*.csproj'''
+    restoreSolution: '**/*.sln'
     feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
