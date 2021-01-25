@@ -88,7 +88,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    projects: '''$(System.DefaultWorkingDirectory)\tests\Adapters\Microsoft.Bot.Builder.Adapters.Webex.TestBot\Microsoft.Bot.Builder.Adapters.Webex.TestBot.csproj'''
+    projects: '**/*.csproj'''
     feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
