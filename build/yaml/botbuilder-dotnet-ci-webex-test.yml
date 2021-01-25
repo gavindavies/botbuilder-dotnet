@@ -85,6 +85,11 @@ steps:
       Write-Host "##vso[task.complete result=Failed;]DONE"
     }
   displayName: Validate variables
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '''$(System.DefaultWorkingDirectory)\tests\Adapters\Microsoft.Bot.Builder.Adapters.Webex.TestBot\Microsoft.Bot.Builder.Adapters.Webex.TestBot.csproj'''
+    feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet publish'
